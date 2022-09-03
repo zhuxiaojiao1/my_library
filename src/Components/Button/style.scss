@@ -1,0 +1,48 @@
+/**
+* @file 
+* @date 2022-09-03
+* @author zhuxiaojiao
+* @lastModify zhuxiaojiao 2022-09-03
+*/
+
+
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+
+
+/** Import all the reference constant after this line */
+
+// @import "~/Constant/breakPoint.scss";
+// @import "~/Constant/font.scss";
+// @import "~/Constant/color.scss";
+
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+
+
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+
+
+/** The demo mixin is ..........*/
+
+
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+
+
+/* <--------------------------- * SECTION1 * --------------------------- */
+
+.btn {
+    border: none;
+    background-color: #fff;
+}
+
+.btn_primary {
+    background-color: pink;
+    color: #fff;
+}
+
+.btn_secondary {
+    border: 0.1rem solid pink;
+    color: #4d4d4d;
+}
+
+
+/* <--------------------------- * SECTION1 * --------------------------- */
