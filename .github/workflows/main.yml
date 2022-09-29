@@ -1,0 +1,21 @@
+name: docker build
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: build and publish docker image to github
+        uses: VaultVulp/gp-docker-action@1.2.0
+        with:
+          github-token: ${secret.MYTOKEN}
+          image-name: my_library__image
+          dockerfile: Dockerfile
+          build-context: build
+          
+      - name: github pages
+        uses: crazy-max/ghaction-github-pages@v3.0.0
