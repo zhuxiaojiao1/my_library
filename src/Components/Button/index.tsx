@@ -7,7 +7,7 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import React, { forwardRef } from "react";
-import style from "./style.scss";
+import style from "./style.module.scss";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -30,20 +30,18 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const handleBtnType = () => {
       switch (type) {
         case "primary":
-          return "btn_primary";
+          return [style.btn_primary].join(" ");
         case "secondary":
-          return "btn_secondary";
+          return [style.btn_secondary].join(" ");
+        case "none":
+          return [style.btn_none].join(" ");
         default:
-          return "";
+          return [style.btn_primary].join(" ");
       }
     };
     /************* This section will include this component general function *************/
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
-    return (
-      <button className={[style.btn, handleBtnType()].join(" ")}>
-        {label}
-      </button>
-    );
+    return <button className={handleBtnType()}>{label}</button>;
   }
 );
 /* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */

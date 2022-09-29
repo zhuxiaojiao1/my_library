@@ -1,8 +1,8 @@
 /**
 * @file 
-* @date 2022-09-03
+* @date 2022-09-08
 * @author zhuxiaojiao
-* @lastModify zhuxiaojiao 2022-09-03
+* @lastModify zhuxiaojiao 2022-09-08
 */
 
 
@@ -11,9 +11,6 @@
 
 /** Import all the reference constant after this line */
 
-// @import "~/Constant/breakPoint.scss";
-// @import "~/Constant/font.scss";
-// @import "~/Constant/color.scss";
 
 /* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
 
@@ -23,25 +20,30 @@
 
 /** The demo mixin is ..........*/
 
+@mixin demo {}
+
 
 /* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
 
 
 /* <--------------------------- * SECTION1 * --------------------------- */
 
-.btn {
-    border: none;
-    background-color: #fff;
-}
-
-.btn_primary {
-    background-color: pink;
-    color: #fff;
-}
-
-.btn_secondary {
-    border: 0.1rem solid pink;
-    color: #4d4d4d;
+.drag_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40rem;
+    li {
+        width: 10rem;
+        height: 10rem;
+        background-color: pink;
+        list-style: none;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        line-height: 10rem;
+    }
 }
 
 
