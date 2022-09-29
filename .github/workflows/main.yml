@@ -12,7 +12,7 @@ jobs:
       - name: build and publish docker image to github
         uses: VaultVulp/gp-docker-action@1.2.0
         with:
-          github-token: ${secret.MY_TOKEN}
+          github-token: ${secrets.MY_TOKEN}
           image-name: my_library__image
           dockerfile: Dockerfile
           build-context: ./storybook-static
