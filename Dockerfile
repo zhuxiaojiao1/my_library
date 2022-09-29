@@ -1,6 +1,7 @@
 FROM node:16.15.1 AS builder
 WORKDIR ./app
 COPY . .
+WORKDIR ./app
 RUN yarn && yarn build-storybook
 
 FROM nginx
