@@ -18,8 +18,7 @@ jobs:
           # build-context: storybook-static
 
       - name: github pages
-        uses: crazy-max/ghaction-github-pages@v3.0.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          build_dir: storybook-static
-        env:
-          GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
+          token: ${{secrets.MY_TOKEN}}
+          folder: ./storybook-static
