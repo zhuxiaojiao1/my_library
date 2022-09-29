@@ -1,8 +1,11 @@
 {
     "name": "@zhuxiaojiao1/my_library",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "",
     "main": "index.js",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -p 6006",
