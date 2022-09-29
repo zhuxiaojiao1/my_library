@@ -17,9 +17,9 @@ jobs:
           dockerfile: Dockerfile
           # build-context: storybook-static
 
-      - name: github pages
-        uses: crazy-max/ghaction-github-pages@v3.0.0
-        with:
-          build_dir: storybook-static
-        env:
-          GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
+      # - name: github pages
+      #   uses: crazy-max/ghaction-github-pages@v3.0.0
+      #   with:
+      #     build_dir: storybook-static
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
