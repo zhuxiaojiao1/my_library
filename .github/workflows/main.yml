@@ -15,7 +15,7 @@ jobs:
           github-token: ${secrets.MY_TOKEN}
           image-name: my_library__image
           dockerfile: Dockerfile
-          build-context: ./storybook-static
+          # build-context: storybook-static
 
       - name: github pages
         uses: crazy-max/ghaction-github-pages@v3.0.0
