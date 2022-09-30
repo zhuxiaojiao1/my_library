@@ -14,11 +14,12 @@ import style from "./style.module.scss";
 export interface ButtonProps {
   label: string;
   type?: "primary" | "secondary" | "none";
+  onClick?: (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ label, type = "primary" }) => {
+  ({ label, type = "primary", ...props }) => {
     Button.displayName = "Button";
     /* <------------------------------------ **** STATE START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
@@ -41,7 +42,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
     /************* This section will include this component general function *************/
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
-    return <button className={handleBtnType()}>{label}</button>;
+    return (
+      <button className={handleBtnType()} {...props}>
+        {label}
+      </button>
+    );
   }
 );
 /* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
